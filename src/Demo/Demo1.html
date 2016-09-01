@@ -2,12 +2,56 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+
+        $(document).ready(function () {
+            //$("#btn1").click(function () {
+            //    // phương thức find tìm
+            //    var noidung = $("#abc").find("#test").attr("data-giatri");
+            //    //var noidung = $("#test").attr("data-giatri");
+            //    alert(noidung);
+
+            //});
+            $("#btn1").click(function () {
+                $("#abc").append("<input>");
+            });
+            $("#btn2").click(function () {
+                $(".container").each(function () {
+                    var noidung = $(this).text();
+                    alert(noidung);
+                });
+            });
+        });
+
+    </script>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" id="abc">
+                <input type="text" id="test" data-giatri="123" />
+                <input type="button" id="btn1" value="lấy" />
+            </div>
+            <!--<input type="text" id="test" data-giatri="1234" />
+            <input type="text" id="test" data-giatri="12345" />
+            <input type="text" id="test" data-giatri="123456" />-->
+            <div class="col-md-8">
+                <div class="col-md-2" id="test1">ab1</div>
+                <div class="col-md-2" id="test1">ab2</div>
+                <div class="col-md-2" id="test1">ab3</div>
+                <div class="col-md-2" id="test1">ab4</div>
+                <input type="button" id="btn2" value="duyet mang" />
+
+            </div>
+
+
+
+        </div>
+    </div>
 
 </body>
 </html>
