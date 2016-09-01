@@ -38,6 +38,22 @@
                 $("#test3").val("Tin học ứng dụng");
             });
         });
+        $(document).ready(function () {
+            var a = "<li>B</li>";
+            $("#btn4").click(function ()
+            {
+               
+               $("ul").append(a);
+            });
+            $("#btn5").click(function () {
+
+                $("ul").prepend(a);
+            });
+            $("#btn6").click(function () {
+
+                $("h2").remove();
+            });
+        });
     </script>
 </head>
 <body>
@@ -58,6 +74,14 @@
                 <button class="btn btn-default" id="btn1">Gán text</button>
                 <button class="btn btn-danger" id="btn2">Gán html</button>
                 <button class="btn btn-info" id="btn3">Gán value</button>
+                <br />
+                <h2>Nội dung</h2>
+                <ul>
+                    <li>A</li>
+                </ul>
+                <button class="btn btn-info" id="btn4">Append</button>
+                <button class="btn btn-danger" id="btn5">prepend</button>
+                <button class="btn btn-danger" id="btn6">Remove</button>
             </div>
         </div>
        
