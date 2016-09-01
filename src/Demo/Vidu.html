@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+
+    <script src="scripts/jquery-1.9.1.js"></script>
+
+    <script src="scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function ()
+        {
+            $("#demo").click(function ()
+            {
+                $("#test").hide(200);
+               
+            });
+
+        });
+        $(document).ready(function ()
+        {
+            $("#btn1").click(function ()
+            {
+                $("#test1").text("Công nghệ thông tin");
+            });
+        });
+        $(document).ready(function () {
+            $("#btn2").click(function ()
+            {
+                $("#test1").html("<b>CNTT</b>")
+            });
+        });
+        $(document).ready(function ()
+        {
+            $("#btn3").click(function () {
+                $("#test3").val("Tin học ứng dụng");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-danger" id="test">Nguyen Thanh Thinh</p>
+                <button class="btn btn-info" id="demo">Nháy Vào</button>
+            </div>
+            <div class="col-md-6">
+
+                <p class="text-info " id="test1">Nội dung được thay thế</p>
+                <p class="text-info" id="test1">Nội dung được thay thế bằng hàm Html</p>
+                <label class="alert alert-info">Họ Và Tên</label>
+                <input type="text" id="test3" value="Nguyễn Thành Thịnh"/>
+                <br /><br /><hr />
+                <button class="btn btn-default" id="btn1">Gán text</button>
+                <button class="btn btn-danger" id="btn2">Gán html</button>
+                <button class="btn btn-info" id="btn3">Gán value</button>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>
