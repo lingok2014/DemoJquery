@@ -3,10 +3,7 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
-
-
     <script src="scripts/jquery-1.9.1.js"></script>
-
     <script src="scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script>
@@ -17,7 +14,6 @@
                 $("#test").hide(200);
                
             });
-
         });
         $(document).ready(function ()
         {
@@ -53,6 +49,20 @@
 
                 $("h2").remove();
             });
+            //$("#btn7").click(function ()
+            //{
+            //    var b = $("#test11").val();
+            //    alert(b);
+            //});
+            //$("body").delegate("#btn7", "click", function ()
+            //{
+            //    var b = $("#test11").val();
+            //    alert(b);
+            //});
+            $("body").on("click", "#btn7", function () {
+                var b = $("#test11").val();
+                alert(b);
+            });
         });
     </script>
 </head>
@@ -60,11 +70,11 @@
     <div class="container">
         <hr />
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <p class="text-danger" id="test">Nguyen Thanh Thinh</p>
                 <button class="btn btn-info" id="demo">Nháy Vào</button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
 
                 <p class="text-info " id="test1">Nội dung được thay thế</p>
                 <p class="text-info" id="test1">Nội dung được thay thế bằng hàm Html</p>
@@ -82,6 +92,10 @@
                 <button class="btn btn-info" id="btn4">Append</button>
                 <button class="btn btn-danger" id="btn5">prepend</button>
                 <button class="btn btn-danger" id="btn6">Remove</button>
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="test11" />
+                <input class="btn btn-default" id="btn7" value="Lấy giá trị" />
             </div>
         </div>
        
